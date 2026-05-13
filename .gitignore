@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.scf/
+*.egg-info/
+dist/
+.env
+deploy_scf.py
+serverless.yml
+vercel.json
+api/

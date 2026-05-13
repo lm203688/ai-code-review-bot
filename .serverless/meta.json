@@ -1,0 +1,80 @@
+{
+  "/home/z/my-project/invisible-gold/projects/ai-code-review-bot/serverless.yml": {
+    "versionFramework": "4.35.1",
+    "servicePath": "/home/z/my-project/invisible-gold/projects/ai-code-review-bot/serverless.yml",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "component": "scf",
+      "name": "ai-code-review-bot",
+      "org": "invisible-gold",
+      "app": "ai-code-review-bot",
+      "stage": "prod",
+      "inputs": {
+        "name": "ai-code-review-bot",
+        "src": {
+          "src": "./package",
+          "exclude": [
+            ".env"
+          ]
+        },
+        "runtime": "Python3.9",
+        "handler": "index.main_handler",
+        "timeout": 30,
+        "memorySize": 256,
+        "namespace": "default",
+        "description": "AI Code Review Bot - 自动审查GitHub PR",
+        "environment": {
+          "variables": {
+            "CODE_REVIEW_GITHUB_APP_ID": "placeholder",
+            "CODE_REVIEW_AI_API_KEY": "<REDACTED>",
+            "CODE_REVIEW_AI_MODEL": "glm-4",
+            "CODE_REVIEW_REVIEW_LANGUAGE": "zh-CN"
+          }
+        },
+        "events": [
+          {
+            "apigw": {
+              "name": "ai-code-review-bot-api",
+              "parameters": {
+                "protocols": [
+                  "https"
+                ],
+                "serviceName": "ai-code-review-bot",
+                "description": "AI Code Review Bot API Gateway",
+                "environment": "release",
+                "endpoints": [
+                  {
+                    "path": "/webhook",
+                    "method": "POST",
+                    "description": "GitHub Webhook接收端点"
+                  },
+                  {
+                    "path": "/health",
+                    "method": "GET",
+                    "description": "健康检查端点"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "error": {
+      "message": "You must sign in or use a license key with Serverless Framework V.4 and later versions. Please use \"serverless login\".",
+      "stack": "Error: You must sign in or use a license key with Serverless Framework V.4 and later versions. Please use \"serverless login\".\n    at Authentication.getAuthenticatedData (/home/z/.serverless/releases/4.35.1/sf-core/src/lib/auth/index.js:156:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Authentication.authenticate (/home/z/.serverless/releases/4.35.1/sf-core/src/lib/auth/index.js:1379:12)\n    at async TraditionalRunner.resolveVariablesAndAuthenticate (/home/z/.serverless/releases/4.35.1/sf-core/src/lib/runners/index.js:286:30)\n    at async TraditionalRunner.run (/home/z/.serverless/releases/4.35.1/sf-core/src/lib/runners/framework.js:81:31)\n    at async route (/home/z/.serverless/releases/4.35.1/sf-core/src/lib/router.js:104:20)\n    at async Object.run (/home/z/.serverless/releases/4.35.1/sf-core/src/index.js:38:3)\n    at async run2 (/home/z/.serverless/releases/4.35.1/sf-core/bin/sf-core.js:31:3)"
+    },
+    "serviceRawFile": "# AI Code Review Bot - 腾讯云SCF部署配置\n\ncomponent: scf\nname: ai-code-review-bot\norg: invisible-gold\napp: ai-code-review-bot\nstage: prod\n\ninputs:\n  name: ai-code-review-bot\n  src:\n    src: ./package\n    exclude:\n      - .env\n  runtime: Python3.9\n  handler: index.main_handler\n  timeout: 30\n  memorySize: 256\n  namespace: default\n  description: AI Code Review Bot - 自动审查GitHub PR\n  environment:\n    variables:\n      CODE_REVIEW_GITHUB_APP_ID: placeholder\n      CODE_REVIEW_AI_API_KEY: placeholder\n      CODE_REVIEW_AI_MODEL: glm-4\n      CODE_REVIEW_REVIEW_LANGUAGE: zh-CN\n  events:\n    - apigw:\n        name: ai-code-review-bot-api\n        parameters:\n          protocols:\n            - https\n          serviceName: ai-code-review-bot\n          description: AI Code Review Bot API Gateway\n          environment: release\n          endpoints:\n            - path: /webhook\n              method: POST\n              description: GitHub Webhook接收端点\n            - path: /health\n              method: GET\n              description: 健康检查端点\n",
+    "command": [
+      "deploy"
+    ],
+    "options": {
+      "debug": "*"
+    },
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
