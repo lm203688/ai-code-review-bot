@@ -1,0 +1,24 @@
+{
+  "name": "AI Code Review Bot",
+  "url": "https://github.com/lm203688/ai-code-review-bot",
+  "hook_attributes": {
+    "url": "https://1341839497-i3yahuu88j.ap-guangzhou.tencentscf.com",
+    "active": true
+  },
+  "redirect_url": "https://github.com/lm203688/ai-code-review-bot",
+  "setup_url": "https://github.com/lm203688/ai-code-review-bot#setup",
+  "description": "AI-powered code review bot for GitHub PRs. Automatic security detection, quality scoring, and deep AI analysis.",
+  "public": true,
+  "default_permissions": {
+    "pull_requests": "write",
+    "issues": "write",
+    "contents": "read",
+    "metadata": "read"
+  },
+  "default_events": [
+    "pull_request",
+    "installation",
+    "installation_repositories",
+    "marketplace_purchase"
+  ]
+}
