@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国SaaS出海合规 — GDPR罚款€20M起，5步完成合规检查（2026实战指南）</title>
+    <meta name="description" content="中国SaaS出海合规完整指南：GDPR/CCPA/数据出境/支付牌照。真实罚款案例：TikTok 3.45亿欧元、中国短视频平台75万欧元。5步合规检查清单+免费AI合规差距分析工具。">
+    <meta name="keywords" content="出海合规, GDPR合规, CCPA, 数据出境, 中国SaaS出海, 隐私政策, 跨境数据传输, GDPR罚款, 出海法律, 合规检查工具">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.8; }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2em; margin-bottom: 20px; line-height: 1.3; }
+        h2 { font-size: 1.5em; margin: 40px 0 15px; color: #302b63; }
+        h3 { font-size: 1.2em; margin: 25px 0 10px; }
+        p { margin-bottom: 15px; color: #333; }
+        .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+        .danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+        .tip { background: #d4edda; border-left: 4px solid #28a745; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+        .info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; font-size: 0.95em; }
+        th { background: #302b63; color: white; }
+        tr:nth-child(even) { background: #f8f9fa; }
+        .cta { display: inline-block; background: linear-gradient(135deg, #302b63, #24243e); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-size: 1.1em; margin: 20px 0; }
+        .cta:hover { opacity: 0.9; }
+        code { background: #f1f3f5; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        ul, ol { margin: 10px 0 10px 20px; }
+        li { margin-bottom: 5px; }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; color: #999; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>中国SaaS出海合规 — GDPR罚款€20M起，5步完成合规检查</h1>
+
+    <div class="danger">
+        ⚠️ <strong>真实罚款案例：</strong>TikTok被爱尔兰DPC罚3.45亿欧元（儿童数据处理不当）。中国短视频平台被荷兰数据保护局罚75万欧元。肯尼亚ODPC对中国深圳公司罚款50万肯尼亚先令。GDPR罚款标准：€20M或4%全球营收（取高者）。
+    </div>
+
+    <h2>一、出海合规5大雷区</h2>
+
+    <table>
+        <tr><th>雷区</th><th>法规</th><th>罚款上限</th><th>中国企业的坑</th></tr>
+        <tr><td>个人数据处理</td><td>GDPR (EU)</td><td>€20M或4%营收</td><td>同意机制不合规、预勾选</td></tr>
+        <tr><td>消费者隐私</td><td>CCPA (加州)</td><td>$7,500/次故意违规</td><td>没有"Do Not Sell"选项</td></tr>
+        <tr><td>儿童数据</td><td>COPPA (US)</td><td>$50,120/次</td><td>年龄验证缺失</td></tr>
+        <tr><td>数据出境</td><td>中国网安法+GDPR</td><td>双向合规</td><td>只做了中国出境，没做EU入境</td></tr>
+        <tr><td>AI系统</td><td>EU AI Act</td><td>€35M或7%营收</td><td>未做风险评估、未标注AI生成</td></tr>
+    </table>
+
+    <h2>二、5步合规检查清单</h2>
+
+    <h3>第1步：确定适用法规</h3>
+    <ul>
+        <li>面向EU用户 → GDPR必须</li>
+        <li>面向加州用户 → CCPA必须</li>
+        <li>有13岁以下用户 → COPPA必须</li>
+        <li>使用AI做决策 → EU AI Act可能适用</li>
+        <li>数据从中国出境 → 网安法+数据出境安全评估</li>
+    </ul>
+
+    <h3>第2步：隐私政策合规</h3>
+    <ul>
+        <li>必须用当地语言（不能只有中文）</li>
+        <li>列出所有数据收集目的</li>
+        <li>说明数据保留期限</li>
+        <li>提供数据主体权利行使方式</li>
+        <li>Cookie必须先同意再设置（不能预勾选）</li>
+    </ul>
+
+    <h3>第3步：数据跨境传输</h3>
+    <p>中国→EU的双向合规：</p>
+    <ul>
+        <li>中国出境：数据出境安全评估/标准合同条款/认证</li>
+        <li>EU入境：标准合同条款(SCC)+补充措施+DPIA</li>
+        <li>⚠️ 两个方向都要做，只做一个不合规</li>
+    </ul>
+
+    <h3>第4步：数据主体权利保障</h3>
+    <ul>
+        <li>访问权：用户可以查看自己的数据</li>
+        <li>删除权：30天内完成删除</li>
+        <li>可携带权：提供数据导出功能</li>
+        <li>反对权：用户可以拒绝自动化决策</li>
+    </ul>
+
+    <h3>第5步：记录与审计</h3>
+    <ul>
+        <li>数据处理活动记录（ROPA）</li>
+        <li>数据保护影响评估（DPIA）</li>
+        <li>指定EU代表（如果不在EU有机构）</li>
+        <li>任命数据保护官（DPO）</li>
+    </ul>
+
+    <h2>三、合规成本对比</h2>
+
+    <table>
+        <tr><th>方案</th><th>成本</th><th>适合谁</th></tr>
+        <tr><td>律师咨询</td><td>¥2,000-5,000/小时</td><td>大企业</td></tr>
+        <tr><td>合规SaaS (Vanta/Drata)</td><td>$1,000+/月</td><td>融资后SaaS</td></tr>
+        <tr><td>AI合规差距分析</td><td>免费</td><td>初创团队</td></tr>
+    </table>
+
+    <h2>四、免费AI合规差距分析工具</h2>
+
+    <p>如果你是初创团队，预算有限，可以先用AI工具做<strong>合规差距分析</strong>——搞清楚自己缺什么，再决定找律师还是自己补：</p>
+
+    <ul>
+        <li>🌍 覆盖7大市场：US/EU/UK/日本/新加坡/越南/沙特</li>
+        <li>📋 GDPR/CCPA/COPPA/AI Act/DSA/数据出境 6大法规</li>
+        <li>🔍 自动生成合规差距分析报告</li>
+        <li>📊 含修复优先级路线图（🔴必须修/🟡建议修）</li>
+        <li>🛠️ 推荐合规工具和服务</li>
+    </ul>
+
+    <div class="tip">
+        <strong>✅ 安装方法：</strong>在ClawHub搜索 <code>cn-global-compliance</code> 或运行 <code>clawhub install cn-global-compliance</code>
+    </div>
+
+    <a href="https://clawhub.ai/lm203688/cn-global-compliance" class="cta">免费安装 cn-global-compliance →</a>
+
+    <div class="warning">
+        <strong>⚠️ 免责声明：</strong>AI工具不能替代律师。合规差距分析是初步筛查，正式合规建议请咨询当地持牌律师。
+    </div>
+
+    <h2>其他免费中文Skills</h2>
+    <ul>
+        <li><strong>cn-seo-optimizer</strong> — 中文SEO+违禁词检查（百度/小红书/抖音/淘宝）</li>
+        <li><strong>cn-geo-monitor</strong> — GEO监测优化器（DeepSeek/Kimi/豆包/ChatGPT 8引擎覆盖）</li>
+        <li><strong>cn-api-doc-writer</strong> — 中文API文档生成器（Swagger→中文文档）</li>
+    </ul>
+
+    <footer>
+        <p>由 <a href="https://github.com/lm203688">lm203688</a> 开发 · 永久免费 · <a href="/ai-code-review-bot/skills.html">查看所有 Skills</a></p>
+    </footer>
+</div>
+</body>
+</html>
